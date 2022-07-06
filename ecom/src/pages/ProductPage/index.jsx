@@ -1,5 +1,6 @@
 import React from "react";
 import { useProduct } from "../../context/productsContext";
+import { initialFilterState } from "../../utils";
 import { ProductCard } from "./components/ProductCard";
 import "./index.css";
 export const ProductPage = () => {
@@ -11,10 +12,16 @@ export const ProductPage = () => {
         className="col gap-2 filter-secti
       on w-3-12 bg-dark h-screen p-2 text-light"
       >
-        <div className="row justify-between">
+        <form className="row justify-between">
           <h1>Filter</h1>
-          <button className="btn btn-primary">Clear Filter</button>
-        </div>
+          <button
+            type="reset"
+            className="btn btn-primary"
+            onClick={() => setFilters(initialFilterState)}
+          >
+            Clear Filter
+          </button>
+        </form>
         <div className="flex col gap-2">
           <div className="col gap-1">
             <h1>Sort by</h1>
@@ -23,7 +30,7 @@ export const ProductPage = () => {
                 Low to High
                 <input
                   type="radio"
-                  name="radio"
+                  name="price"
                   onChange={() => {
                     setFilters({ ...filters, isPriceHighToLow: false });
                   }}
@@ -35,7 +42,7 @@ export const ProductPage = () => {
                 High to Low
                 <input
                   type="radio"
-                  name="radio"
+                  name="price"
                   onChange={() => {
                     setFilters({ ...filters, isPriceHighToLow: true });
                   }}
@@ -52,20 +59,7 @@ export const ProductPage = () => {
                 S
                 <input
                   type="radio"
-                  name="radio"
-                  value="S"
-                  onChange={(e) => {
-                    setFilters({ ...filters, size: e.target.value });
-                  }}
-                  checked={(e) => filters.size === e.target.value}
-                />
-                <span class="checkmark"></span>
-              </label>
-              <label class="radio-container">
-                M
-                <input
-                  type="radio"
-                  name="radio"
+                  name="size"
                   value="S"
                   onChange={(e) => {
                     setFilters({ ...filters, size: e.target.value });
@@ -75,10 +69,10 @@ export const ProductPage = () => {
                 <span class="checkmark"></span>
               </label>
               <label class="radio-container">
-                L
+                M
                 <input
                   type="radio"
-                  name="radio"
+                  name="size"
                   value="M"
                   onChange={(e) => {
                     setFilters({ ...filters, size: e.target.value });
@@ -88,10 +82,23 @@ export const ProductPage = () => {
                 <span class="checkmark"></span>
               </label>
               <label class="radio-container">
+                L
+                <input
+                  type="radio"
+                  name="size"
+                  value="L"
+                  onChange={(e) => {
+                    setFilters({ ...filters, size: e.target.value });
+                  }}
+                  checked={filters.size === "L"}
+                />
+                <span class="checkmark"></span>
+              </label>
+              <label class="radio-container">
                 XL
                 <input
                   type="radio"
-                  name="radio"
+                  name="size"
                   value="XL"
                   onChange={(e) => {
                     setFilters({ ...filters, size: e.target.value });
@@ -104,7 +111,7 @@ export const ProductPage = () => {
                 XXL
                 <input
                   type="radio"
-                  name="radio"
+                  name="size"
                   value="XXL"
                   onChange={(e) => {
                     setFilters({ ...filters, size: e.target.value });

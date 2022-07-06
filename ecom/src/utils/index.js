@@ -14,3 +14,10 @@ export function shuffle(array) {
 
   return array;
 }
+
+export const initialFilterState = {
+  brands: [],
+  isPriceHighToLow: false,
+  size: "",
+  genders: [],
+};

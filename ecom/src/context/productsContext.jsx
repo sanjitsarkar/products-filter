@@ -5,7 +5,7 @@ import React, {
   useReducer,
   useState,
 } from "react";
-import { shuffle } from "../utils";
+import { initialFilterState, shuffle } from "../utils";
 
 const ProductContext = createContext();
 const initialState = {
@@ -36,12 +36,7 @@ const reducer = (state, action) => {
 };
 const ProductProvider = ({ children }) => {
   const [products, dispatchProducts] = useReducer(reducer, initialState);
-  const [filters, setFilters] = useState({
-    brands: [],
-    isPriceHighToLow: false,
-    size: "",
-    genders: [],
-  });
+  const [filters, setFilters] = useState(initialFilterState);
   const filterProducts = async () => {
     const { brands, genders, size, isPriceHighToLow } = filters;
     dispatchProducts({ type: "LOADING" });
@@ -53,7 +48,6 @@ const ProductProvider = ({ children }) => {
       _products = await _products.json();
       _products = shuffle(_products.products);
 
-      console.log(_products);
       if (brands && brands.length > 0) {
         _products = _products.filter((product) =>
           brands.includes(product.brand)
@@ -62,7 +56,7 @@ const ProductProvider = ({ children }) => {
 
       if (genders && genders.length > 0) {
         _products = _products.filter((product) =>
-          categories.includes(product.gender)
+          genders.includes(product.gender)
         );
       }
       if (size) {

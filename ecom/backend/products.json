@@ -67,8 +67,8 @@
 "discountPercentage": 16.44,
 "rating": 4.62,
 "stock": 136,
-"brand": "The Warehouse",
-"category": "Puma",
+"category": "mens-shirts",
+"brand": "Puma",
 "gender":"Male",
 "size":"M",
 "thumbnail": "https://dummyjson.com/image/i/products/54/thumbnail.jpg",
@@ -110,6 +110,7 @@
 "rating": 4.65,
 "stock": 21,
 "brand": "Zara",
+"size":"S",
 "category": "womens-dresses","gender":"Female",
 "thumbnail": "https://dummyjson.com/image/i/products/41/thumbnail.webp",
 "images": [
@@ -129,6 +130,7 @@
 "rating": 4.05,
 "stock": 148,
 "brand": "Zara",
+"size":"XXL",
 "category": "womens-dresses","gender":"Female",
 "thumbnail": "https://dummyjson.com/image/i/products/42/thumbnail.jpg",
 "images": [
@@ -148,6 +150,7 @@
 "rating": 4.31,
 "stock": 150,
 "brand": "Levis",
+"size":"XL",
 "category": "womens-dresses","gender":"Female",
 "thumbnail": "https://dummyjson.com/image/i/products/43/thumbnail.jpg",
 "images": [
@@ -167,6 +170,7 @@
 "rating": 4.03,
 "stock": 2,
 "brand": "Zara",
+"size":"M",
 "category": "womens-dresses","gender":"Female",
 "thumbnail": "https://dummyjson.com/image/i/products/44/thumbnail.jpg",
 "images": [
@@ -186,6 +190,7 @@
 "rating": 4.67,
 "stock": 96,
 "brand": "Zara",
+"size":"L",
 "category": "womens-dresses","gender":"Female",
 "thumbnail": "https://dummyjson.com/image/i/products/45/thumbnail.jpg",
 "images": [
