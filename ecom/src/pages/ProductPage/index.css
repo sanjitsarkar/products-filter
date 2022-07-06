@@ -1,0 +1,15 @@
+.product-grid{
+    max-height: 90vh;
+    overflow-y: auto;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card .card-header{
+height: 10rem;
+}
+.card .card-bottom{
+    height:auto;
+}
+.filter-section{
+    
+}
