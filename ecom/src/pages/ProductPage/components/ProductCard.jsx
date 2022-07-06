@@ -2,7 +2,7 @@ import React from "react";
 
 export const ProductCard = ({ product }) => {
   return (
-    <div class="card card-sm">
+    <div class="card card-sm" id="product-card">
       <div class="card-header">
         <img src={product.thumbnail} alt={product.title} class="w-full" />
       </div>
