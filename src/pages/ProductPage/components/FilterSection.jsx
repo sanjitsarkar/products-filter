@@ -200,7 +200,7 @@ export const FilterSection = () => {
           </div>
         </div>
         <div className="col gap-1">
-          <h1>For Gender</h1>
+          <h1>Ideal for</h1>
           <div className="row gap-1 flex-wrap items-center">
             <label class="checkbox-container">
               Male
