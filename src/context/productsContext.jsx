@@ -41,7 +41,7 @@ const ProductProvider = ({ children }) => {
     const { brands, genders, size, isPriceHighToLow } = filters;
     dispatchProducts({ type: "LOADING" });
     try {
-      let _products = await fetch("../../backend/products.json", {
+      let _products = await fetch("./backend/products.json", {
         method: "get",
       });
 
